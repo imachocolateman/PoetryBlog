@@ -9,6 +9,8 @@ class Post(models.Model):
 	post_date = models.DateTimeField('date published')
 	content = models.TextField(default="Add content here")
 	last_update = models.DateTimeField(auto_now=True)
+	
+
 
 	def __str__(self):
 		return self.title
