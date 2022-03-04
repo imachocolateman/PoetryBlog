@@ -12,8 +12,8 @@ class Post(models.Model):
 	content = models.TextField(default="Add content here")
 	last_update = models.DateTimeField(auto_now=True)
 	tags = TaggableManager()
-	snippet = models.CharField(max_length=200)
-	image = models.ImageField()
+	snippet = models.CharField(max_length=200, default="Add Snippet here")
+	image = models.ImageField(blank=True, upload_to='blog_images')
 	
 
 
