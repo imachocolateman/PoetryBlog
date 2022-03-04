@@ -5,7 +5,9 @@
 {% block body %}
 <div class="row">
     <div class="card">
+        {% if post.image %}
         <img src="{{ post.image.url }}" class="card-img-top img-fluid" alt="{{ post.title }}">
+        {% endif %}
         <div class="card-body">
             <h1 class="card-title">{{ post.title }}</h1>
             <h5 class="card-title">Published: {{ post.post_date }}</h5>
