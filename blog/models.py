@@ -3,12 +3,15 @@ import datetime
 from django.db import models
 from django.utils import timezone
 
+from taggit.managers import TaggableManager
+
 # Create your models here.
 class Post(models.Model):
 	title = models.CharField(max_length=200)
 	post_date = models.DateTimeField('date published')
 	content = models.TextField(default="Add content here")
 	last_update = models.DateTimeField(auto_now=True)
+	tags = TaggableManager()
 	
 
 
