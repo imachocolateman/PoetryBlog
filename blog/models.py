@@ -14,7 +14,7 @@ class Post(models.Model):
 	tags = TaggableManager()
 	snippet = models.CharField(max_length=200, default="Add Snippet here")
 	image = models.ImageField(blank=True, upload_to='post_images')
-	
+	favorite = models.BooleanField(default=False)
 
 
 	def __str__(self):

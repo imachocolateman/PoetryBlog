@@ -12,6 +12,7 @@
 	<ul>
 	{% for post in latest_post_list %}
 		<li><a href="{% url 'blog:detail' post.id %}">{{ post.title }}</a></li>
+		<p>{{ post.snippet }}</p>
 	{% endfor %}
 	</ul>
 {% else %}
