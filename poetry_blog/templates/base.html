@@ -35,7 +35,14 @@
     	<div class="container-fluid bg-dark text-white">
     		<div class="row">
     			<div class="col">Logo</div>
-	    		<div class="col col-md-8">Search Bar</div>
+	    		<div class="col-md-4">
+	    			<div class="input-group rounded">
+	    				<input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon"/>
+	    				<span class="input-group-text border-0" id="search-addon">
+	    					<i class="fas fa-search"></i>
+	    				</span>
+	    			</div>
+    			</div>
 	    		<div class="col">About Us</div>
     		</div>
     	</div>
@@ -44,23 +51,25 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-2">
-				<section>
-					Tags
+				<section id="tags">
+					<h3>Tags</h3>
+					{% block tags %}{% endblock %}
 				</section>
 			</div>
 			<div class="col-8">
 				{% block body %}{% endblock %}
 			</div>
 			<div class="col-2">
-				<section>
-					User favs
+				<section id="favs">
+					<h3>User Favs</h3>
+					{% block user_favs %}{% endblock %}
 				</section>
 			</div>
 		</div>
 	</div>
 
 	<!-- Footer -->
-	<footer class="py-5 bg-dark">
+	<footer class="py-2 bg-dark fixed-bottom">
 		<div class="container px-4"><p class="m-0 text-center text-white">Copyright &copy; Watisys</p></div>
 	</footer>
 
