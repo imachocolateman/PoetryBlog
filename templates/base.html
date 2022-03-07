@@ -50,16 +50,13 @@
 
 	<div class="container">
 		<div class="row">
-			<div class="col-2">
-				<section id="tags">
-					<h3>Tags</h3>
-					{% block tags %}{% endblock %}
-				</section>
+			<div class="col-sm-2">
+				<section id="tags">{% block tags %}{% endblock %}</section>
 			</div>
-			<div class="col-8">
+			<div class="col-6">
 				{% block body %}{% endblock %}
 			</div>
-			<div class="col-2">
+			<div class="col-4">
 				<section id="favs">
 					<h3>User Favs</h3>
 					{% block user_favs %}{% endblock %}

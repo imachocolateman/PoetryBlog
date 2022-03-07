@@ -2,10 +2,11 @@
 
 {% block title %}Home | {% endblock %}
 
-{% block body %}
+{% block tags %}{% include "blog/tags.html" %}{% endblock %}
 
+{% block body %}
 {% if tag %}
-	<h2 class="mb-3">Posts tagged with "{{ tag.name }}"</h2>
+	<h1 class="mb-3">Posts tagged with "{{ tag.name }}"</h1>
 {% endif %}
 
 {% if latest_post_list %}
