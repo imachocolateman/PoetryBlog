@@ -6,50 +6,64 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="author" content="Sanchit Kumar" />
+    <meta name="keywords" content="Poetry, Poem">
+    <meta name="description" content="Online Poetry blog for Rachel Bailey">
 
 	<title>{% block title %}{% endblock %}Missy Anne's Poetry</title>
 
+	<!-- Meta Property -->
+	<meta property="og:title" content="A Basic HTML5 Template">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://www.sitepoint.com/a-basic-html5-template/">
+	<meta property="og:description" content="A simple HTML5 Template for new projects.">
+
 	{% load static %}
 	<link rel="icon" type="image/x-icon" href="{% static 'assets/favicon.ico' %}" />
+	<!-- Modify these files -->
+	<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 	<!-- Bootstrap CSS -->
 	<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" type="text/css">
 	<!-- Remix Icons -->
 	<link rel="stylesheet" type="text/css" href="{% static 'fonts/remixicon.css' %}">
-</head>
 
+</head>
 
 <body id="page-top">
 	<!-- Nav -->
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
 		<div class="container px-4">
-			<a class="navbar-brand" href="#page-top">Start Bootstrap</a>
+			<a class="navbar-brand" href="#page-top">Logo</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             	<span class="navbar-toggler-icon"></span>
             </button>
+            <p>title</p>
             <div class="collapse navbar-collapse" id="navbarResponsive">
             	<ul class="navbar-nav ms-auto">
+            		<!-- Use modal pop-up features -->
             		<li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
 	<!-- Header Bar -->
-	<header class="container">
-		<a href="#">Image</a>
+    <header class="bg-primary bg-gradient text-white">
+        <div class="container px-4 text-center">
+            <h1 class="fw-bolder">Welcome to Scrolling Nav</h1>
+            <p class="lead">A functional Bootstrap 5 boilerplate for one page scrolling websites</p>
+        </div>
+    </header>
 
-	</header>
+    
 
-	<h1 class="container">Title</h1>
+	<article>{% block body %}{% endblock %}</article>
 
-	{% block body %}{% endblock %}
+
 
 	<!-- Footer -->
-	<footer>
-		<a href="#">About</a>
-		<a href="#">Contact</a>
+	<footer class="py-5 bg-dark">
+		<div class="container px-4"><p class="m-0 text-center text-white">Copyright &copy; Watisys</p></div>
 	</footer>
 
 	<!-- Bootstrap with Popper -->

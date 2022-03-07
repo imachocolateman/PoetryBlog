@@ -6,16 +6,16 @@ from .models import Post
 # Create your views here.
 def post_list(request, tag_slug=None):
 	latest_post_list = Post.objects.order_by('-post_date')[:5]
-	posts = get_object_or_404(Post)
+	# posts = get_object_or_404(Post)
 
 	tag = None
 	if tag_slug:
 		tag = get_object_or_404(Tag, slug=tag_slug)
-		posts = Post.objects.filter(tags__in=[tag])
+		# posts = Post.objects.filter(tags__in=[tag])
 
 	context = {
 		'latest_post_list': latest_post_list,
-		'posts': posts,
+		# 'posts': posts,
 		'tag': tag,
 	}
 
