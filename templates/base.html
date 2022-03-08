@@ -5,17 +5,11 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="author" content="Sanchit Kumar" />
-    <meta name="keywords" content="Poetry, Poem">
-    <meta name="description" content="Online Poetry blog for Rachel Bailey">
+	{% include "meta_name.html" %}
 
 	<title>{% block title %}{% endblock %}Missy Anne's Poetry</title>
 
-	<!-- Meta Property -->
-	<meta property="og:title" content="A Basic HTML5 Template">
-	<meta property="og:type" content="website">
-	<meta property="og:url" content="https://www.sitepoint.com/a-basic-html5-template/">
-	<meta property="og:description" content="A simple HTML5 Template for new projects.">
+	{% include "meta_property.html" %}
 
 	{% load static %}
 	<link rel="icon" type="image/x-icon" href="{% static 'assets/favicon.ico' %}" />
