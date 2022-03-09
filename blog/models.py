@@ -26,11 +26,11 @@ class Post(models.Model):
 		return self.last_update >= timezone.now() - datetime.timedelta(days=1)
 
 
-# class Author(models.Model):
-# 	name = models.CharField(max_length=200)
-# 	profile_pic = models.ImageField(blank=True, upload_to="author_pics")
-# 	email = models.EmailField(max_length=254, default="#")
-# 	created_date = models.DateField(auto_now_add=True)
+class Author(models.Model):
+	name = models.CharField(max_length=200)
+	profile_pic = models.ImageField(blank=True, upload_to="author_pics")
+	email = models.EmailField(max_length=254, default="#")
+	created_date = models.DateField(auto_now_add=True)
 
-# 	def __str__(self):
-# 		return self.name
+	def __str__(self):
+		return self.name
