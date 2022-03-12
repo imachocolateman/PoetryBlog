@@ -12,7 +12,7 @@ def post_list(request, tag_slug=None):
 	tag = None
 	if tag_slug:
 		tag = get_object_or_404(Tag, slug=tag_slug)
-		latest_post_list = Post.objects.filter(tags__name=tag_slug)
+		latest_post_list = Post.objects.filter(tags__slug=tag_slug).order_by('-post_date')
 
 
 	context = {
