@@ -1,8 +1,13 @@
 <div class="card">
   <div class="card-body">
-    <h5 class="card-title">Tags</h5>
+    <h5 class="card-title">Most Popular Tags</h5>
     <hr>
-    <p class="card-text">Tag name plus small</p>
-    <a href="#" class="btn btn-primary">Tag</a>
+    {% if tags %}
+      {% for tag in tags %}
+    <a href="{% url 'blog:post_tag' tag.slug %}" class="btn btn-secondary mb-1">{{tag.name}}</a>
+      {% endfor %}
+    {% else %}
+    <p class="card-text">No Tags to show</p>
+    {% endif %}
   </div>
 </div>
